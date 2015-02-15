@@ -1,0 +1,31 @@
+#comming-soon{
+	height: 100%;
+}
+#comming-soon .center{
+	display: table;
+}
+#comming-soon .logo{
+	float: left;
+	margin-left: 23px;
+	
+}
+#comming-soon-dog{
+	float: left;
+	margin-left: 122px;
+	margin-top: -85px;
+	
+}
+#comming-soon p.content{
+	float: left;
+	margin-left: 74px;
+	top: 50%;
+	line-height: 90px;
+	font-family: "OSB";
+	font-size: 24px;
+	color: #4e4e4e;
+}
+#comming-soon-inner{
+	display: table-cell;
+	vertical-align: middle;
+	height: 750px;
+}

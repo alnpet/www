@@ -1,0 +1,134 @@
+/**
+ * reset
+ */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,
+form,fieldset,input,textarea,p,blockquote,th,td {
+padding: 0;
+margin: 0;
+}
+table {
+border-collapse: collapse;
+border-spacing: 0;
+}
+fieldset,img {
+border: 0;
+}
+address,caption,cite,code,dfn,em,strong,th,var {
+font-weight: normal;
+font-style: normal;
+}
+ol,ul {
+list-style: none;
+}
+caption,th {
+text-align: left;
+}
+h1,h2,h3,h4,h5,h6 {
+font-weight: normal;
+font-size: 100%;
+}
+q:before,q:after {
+content:'';
+}
+abbr,acronym { border: 0;
+}
+/**
+ * end of reset
+ */
+.clearfix:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+}
+body{
+	font-family: "OSR";
+}
+@font-face {
+	font-family: "OSEB";
+	src: url("../fonts/OpenSans-ExtraBold.ttf");
+}
+@font-face {
+	font-family: "OSBI";
+	src: url("../fonts/OpenSans-BoldItalic.ttf");
+}
+
+@font-face {
+	font-family: "OSSBI";
+	src: url("../fonts/OpenSans-SemiboldItalic.ttf");
+}
+
+
+@font-face{
+	font-family: "OSLI";
+	src: url("../fonts/OpenSans-LightItalic.ttf");
+}
+@font-face{
+	font-family: "OSI";
+	src: url("../fonts/OpenSans-Italic.ttf");
+}
+@font-face{
+	font-family: "OSEBI";
+	src: url("../fonts/OpenSans-ExtraBoldItalic.ttf");
+}
+@font-face {
+    font-family: 'OSR';
+    src: url('../fonts/OpenSansRegular.eot');
+    src: url('../fonts/OpenSansRegular.eot') format('embedded-opentype'),
+         url('../fonts/OpenSansRegular.woff2') format('woff2'),
+         url('../fonts/OpenSansRegular.woff') format('woff'),
+         url('../fonts/OpenSansRegular.ttf') format('truetype'),
+         url('../fonts/OpenSansRegular.svg#OpenSansRegular') format('svg');
+}
+@font-face {
+    font-family: 'OSSB';
+    src: url('../fonts/OpenSansSemibold.eot');
+    src: url('../fonts/OpenSansSemibold.eot') format('embedded-opentype'),
+         url('../fonts/OpenSansSemibold.woff2') format('woff2'),
+         url('../fonts/OpenSansSemibold.woff') format('woff'),
+         url('../fonts/OpenSansSemibold.ttf') format('truetype'),
+         url('../fonts/OpenSansSemibold.svg#OpenSansSemibold') format('svg');
+}
+@font-face {
+    font-family: 'OSL';
+    src: url('../fonts/OpenSansLight.eot');
+    src: url('../fonts/OpenSansLight.eot') format('embedded-opentype'),
+         url('../fonts/OpenSansLight.woff2') format('woff2'),
+         url('../fonts/OpenSansLight.woff') format('woff'),
+         url('../fonts/OpenSansLight.ttf') format('truetype'),
+         url('../fonts/OpenSansLight.svg#OpenSansLight') format('svg');
+}
+@font-face {
+    font-family: 'OSB';
+    src: url('../fonts/OpenSansBold.eot');
+    src: url('../fonts/OpenSansBold.eot') format('embedded-opentype'),
+         url('../fonts/OpenSansBold.woff2') format('woff2'),
+         url('../fonts/OpenSansBold.woff') format('woff'),
+         url('../fonts/OpenSansBold.ttf') format('truetype'),
+         url('../fonts/OpenSansBold.svg#OpenSansBold') format('svg');
+}
+body{
+    min-width: 990px;
+    z-index: 0;
+    position: relative;
+}
+.center{
+    max-width: 990px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.logo{
+    float: left;
+    width: 222px;
+    height: 72px;
+}
+.logo .logo-img{
+    margin-bottom: 9px;
+}
+.logo .intro{
+    margin-left: 70px;
+    font-size: 15px;
+    color: #999;
+}
