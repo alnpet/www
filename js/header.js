@@ -252,7 +252,7 @@ var newsletterShow = function () {
 };
 $(document).ready(function () {
     var options = {
-        url: 'http://www.alnpet.com/ajax/newsletter?op=signup',
+        url: 'http://api.alnpet.com/ajax/newsletter?op=signup',
         type: 'get',
         dataType: 'text',
         success: function (data) {
