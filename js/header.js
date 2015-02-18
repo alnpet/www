@@ -228,7 +228,7 @@ var preorderShow = function () {
             var scrollObj = GetPageScroll();
             var scrollTop = scrollObj.Y;
             var nowHeight = getViewSizeWithoutScrollbar().height + scrollTop;
-            var heightTemp = nowHeight - 600 > 0 ? nowHeight - 600 : 0;
+            var heightTemp = nowHeight - 800 > 0 ? nowHeight - 800 : 0;
             $("#preorder-popout-wrap").css("marginTop", heightTemp + "px");
             $("#preorder-popout").hide().myFadeIn();
         }
@@ -244,7 +244,7 @@ var newsletterShow = function () {
             var scrollObj = GetPageScroll();
             var scrollTop = scrollObj.Y;
             var nowHeight = getViewSizeWithoutScrollbar().height + scrollTop;
-            var heightTemp = nowHeight - 600 > 0 ? nowHeight - 600 : 0;
+            var heightTemp = nowHeight - 800 > 0 ? nowHeight - 800 : 0;
             $("#newsletter-popout-wrap").css("marginTop", heightTemp + "px");
             $("#newsletter-popout").hide().myFadeIn();
         }

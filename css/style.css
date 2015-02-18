@@ -2501,7 +2501,10 @@ a{
     color: #2377ba;
 }
 #copyright-line a{
-    text-decoration: none;
+    color: #878282
+}
+#copyright-line a:hover{
+    text-decoration: underline;
     color: #2377ba;
 }
 #news-content .title-line{
@@ -2545,4 +2548,7 @@ a{
     margin-bottom: 0px;
     line-height: 25px;
     font-size: 13px;
+}
+#top-line{
+    background-color: white;
 }
