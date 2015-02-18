@@ -42,7 +42,6 @@ $(document).ready(function () {
             }
             marginFrom2 = 645 - 600 + 600 * scale;
             marginTo2 = 745 - 600 + 600 * scale;
-            console.log(nowHeight);
             var showContentHeight = parseInt($("#show-content-hold-place").height());
             var feederContentHeight = parseInt($("#feeder-content").height()) + 47;
             var appContentHeight = parseInt($("#app-content").height()) + 54;
@@ -162,7 +161,7 @@ $(document).ready(function () {
                 "position": "relative",
                 "left": "0%",
                 "marginLeft": "0px",
-                "clear" : "none"
+                "clear": "none"
             });
             $("#feeder-content .large-feeder").css("marginLeft", "-105px");
             $(".large-feeder").css({
@@ -173,7 +172,7 @@ $(document).ready(function () {
             });
         }
         if (size.width < 990) {
-            
+
             scale = size.width / 990;
             var marginLeft = (990 - size.width) / 2;
             var marginTop = (600 - 600 * scale) / 2;
@@ -199,10 +198,10 @@ $(document).ready(function () {
                 "height": 600 * scale + "px"
             });
             $("#show-content").css({
-                "paddingLeft":"20px"
+                "paddingLeft": "20px"
             });
             $("#product-tag-line").css({
-                "paddingLeft":"20px"
+                "paddingLeft": "20px"
             });
             var marginTop = (128 - 128 * scale) / 2;
             var marginLeft = (775 - size.width) / 2;
@@ -255,10 +254,10 @@ $(document).ready(function () {
                 "height": "auto"
             });
             $("#show-content").css({
-                "paddingLeft":"0px"
+                "paddingLeft": "0px"
             });
             $("#product-tag-line").css({
-                "paddingLeft":"0px"
+                "paddingLeft": "0px"
             });
             $("#show-content-hold-place").css({
                 "width": "auto",

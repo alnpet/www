@@ -8,11 +8,16 @@ var liFadeIn = function (obj, num, max, timeout) {
         }
     }, timeout);
 };
-var scrollPic = function (imgWidth, imgHeight, essentialHeight, marginTo, jqueryObj, jqueryObjInner, limitHeight, position) {
+var scrollPic = function (imgWidth, imgHeight, essentialHeight, marginTo, jqueryObj, jqueryObjInner, limitHeight, position, limit) {
     var widthTemp = size.width;
     var newWidth;
     var newHeight;
-    var wrapWidth = widthTemp > 990 ? widthTemp : 990;
+    var wrapWidth;
+    if (limit === false) {
+        wrapWidth = widthTemp;
+    } else {
+        wrapWidth = widthTemp > 990 ? widthTemp : 990;
+    }
     var wrapHeight = wrapWidth / imgWidth * imgHeight > essentialHeight ? wrapWidth / imgWidth * imgHeight :
         essentialHeight;
     if (limitHeight) {
@@ -23,6 +28,40 @@ var scrollPic = function (imgWidth, imgHeight, essentialHeight, marginTo, jquery
     jqueryObj.css("marginTop", marginFrom + "px");
     return marginFrom;
 
+};
+var changeScale = function (jqueryObj, prevWidth, prevHeight) {
+    var marginLeft = (prevWidth - size.width) / 2;
+    var marginTop = (prevHeight - prevHeight * scale) / 2;
+    $(jqueryObj).css({
+        "transform": "scale(" + scale + ", " + scale + ")",
+        "-ms-transform": "scale(" + scale + ", " + scale + ")",
+        /* IE 9 */
+        "-moz-transform": "scale(" + scale + ", " + scale + ")",
+        /* Firefox */
+        "-webkit-transform": "scale(" + scale + ", " + scale + ")",
+        /* Safari 和 Chrome */
+        "-o-transform": "scale(" + scale + ", " + scale + ")",
+        /* Opera */
+        "left": 0 - marginLeft + "px",
+        "top": 0 - marginTop + "px",
+        "width": prevWidth + "px",
+        "height": prevHeight + "px"
+    });
+};
+var recoverScale = function (jqueryObj) {
+    $(jqueryObj).css({
+        "transform": "scale(1,1)",
+        "-ms-transform": "scale(1,1)",
+        /* IE 9 */
+        "-moz-transform": "scale(1,1)",
+        /* Firefox */
+        "-webkit-transform": "scale(1,1)",
+        /* Safari 和 Chrome */
+        "-o-transform": "scale(1,1)",
+        /* Opera */
+        "left": "0px",
+        "top": "0px"
+    });
 };
 var resizePic = function (wrapWidth, wrapHeight, imgWidth, imgHeight, wrapObj, Obj, position) {
     wrapObj.css("width", wrapWidth + "px");
@@ -252,8 +291,8 @@ var newsletterShow = function () {
 };
 $(document).ready(function () {
     var options = {
-        url: 'http://api.alnpet.com/ajax/newsletter?op=signup',
-        type: 'get',
+        url: 'www.baidu.com',
+        type: 'post',
         dataType: 'text',
         success: function (data) {
 
@@ -297,7 +336,7 @@ $(document).ready(function () {
         $(this).attr("src", src.split("_")[0] + "_off.gif");
     });
     var preloadImg = ["./images/facebook_on.gif", "./images/twitter_on.gif", "./images/instagram_on.gif",
-        "./images/pinterest_on.gif", "./images/linkedin_on.gif", "./images/youtube_on.gif","./images/newsletter bg.png"
+        "./images/pinterest_on.gif", "./images/linkedin_on.gif", "./images/youtube_on.gif", "./images/newsletter bg.png"
     ];
     for (var i = 0; i < preloadImg.length; i++) {
         obj = new Image();

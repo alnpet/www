@@ -1,40 +1,180 @@
 $(document).ready(function () {
-    $(window).resize(function () {
+    var resizeFunc = function () {
         size = getViewSizeWithoutScrollbar();
         resizePetSystem();
         resizePhotoShow();
         resizeScroll();
         resizeTechPower();
+        if (size.width < 990) {
+            scale = size.width / 990;
+            changeScale($("#happy-pet-system"), 990, 620);
+            $("#motion-hand-phone").addClass("hide").hide();
+            $("#happy-pet-placeholder").css("height", 620 * scale + "px");
+            $("#tech-better-connection-content").css({
+                "marginRight": "2%"
+            });
+            $("#tech-diagram").css({
+                "transform": "scale(" + scale + ", " + scale + ")",
+                "-ms-transform": "scale(" + scale + ", " + scale + ")",
+                /* IE 9 */
+                "-moz-transform": "scale(" + scale + ", " + scale + ")",
+                /* Firefox */
+                "-webkit-transform": "scale(" + scale + ", " + scale + ")",
+                /* Safari 和 Chrome */
+                "-o-transform": "scale(" + scale + ", " + scale + ")"
+            });
+            $("#collar-proof img").css({
+                "width": 857 * scale + "px",
+                "height": 199 * scale + "px"
+            });
+            $("#collar-proof").css({
+                "width": 857 * scale + "px",
+                "height": 199 * scale + "px"
+            });
+            $("#tech-photo-show p").css({
+                "font-size": "14px"
+            });
+            if (size.width < 665) {
+                $("#tech-photo-show p").css({
+                    "font-size": "12px"
+                });
+            }
+            if (size.width < 940) {
+                $("#tech-feeding-bowl .right-part").css({
+                    "marginTop": "0px",
+                    "float": "left",
+                    "marginLeft": "10%"
+                });
+            } else {
+                $("#tech-feeding-bowl .right-part").css({
+                    "marginTop": "69px",
+                    "float": "right",
+                    "marginLeft": "0px"
+                });
+            }
+            if (size.width < 620) {
+                $("#accurate-motion-wrap").css({
+                    "width": "100%"
+                });
+                $(".accurate-motion-each").css({
+                    "float": "left",
+                    "marginRight": "20px"
+                });
+                $("#tech-motion-content h1").css({
+                    "marginTop": "0px"
+                });
+                $("#tech-motion-content p").css({
+                    "font-size": "20px"
+                });
+            } else {
+                $("#accurate-motion-wrap").css({
+                    "width": "auto"
+                });
+                $(".accurate-motion-each").css({
+                    "float": "none",
+                    "marginRight": "0px"
+                });
+                $("#tech-motion-content h1").css({
+                    "marginTop": "123px"
+                });
+                $("#tech-motion-content p").css({
+                    "font-size": "22px"
+                });
+            }
+            if (size.width < 900) {
+                $("#tech-low-power h1").css("color", "#333");
+                $("#tech-low-power p").css("color", "#999");
+            } else {
+                $("#tech-low-power h1").css("color", "white");
+                $("#tech-low-power p").css("color", "white");
+            }
+            resizeScroll();
+        } else {
+            recoverScale($("#happy-pet-system"));
+            recoverScale($("#tech-diagram"));
+            recoverScale($("#collar-proof"));
+            $("#motion-hand-phone").removeClass("hide").show();
+            $("#happy-pet-system").css({
+                "width": "100%",
+                "height": "620px",
+                "transform": "none",
+                "-webkit-transform": "none"
+            });
+            $("#happy-pet-placeholder").css("height", "620px");
+            $("#tech-feeding-bowl .right-part").css({
+                "marginTop": "69px",
+                "float": "right",
+                "marginLeft": "0px"
+            });
+            $("#tech-better-connection-content").css({
+                "marginRight": "49px"
+            });
+            $("#tech-photo-show p").css({
+                "font-size": "25px"
+            });
+            $("#accurate-motion-wrap").css({
+                "width": "auto"
+            });
+            $(".accurate-motion-each").css({
+                "float": "none",
+                "marginRight": "0px"
+            });
+            $("#tech-motion-content h1").css({
+                "marginTop": "123px"
+            });
+            $("#tech-motion-content p").css({
+                "font-size": "22px"
+            });
+            $("#collar-proof img").css({
+                "width": "857px",
+                "height": "199px"
+            });
+            $("#collar-proof").css({
+                "width": "857px",
+                "height": "199px"
+            });
+            $("#tech-low-power h1").css("color", "white");
+            $("#tech-low-power p").css("color", "white");
+            resizeScroll();
+        }
+    };
+    $(window).resize(function () {
+        resizeFunc();
     });
     $(window).scroll(function () {
         var scrollObj = GetPageScroll();
         var scrollTop = scrollObj.Y;
         var nowHeight = getViewSizeWithoutScrollbar().height + scrollTop;
-        if (nowHeight >= 758 && nowHeight <= (758 + size.height + 371)) {
-            var marginTop = marginFromEmotional + (nowHeight - 758) * (marginToEmotional -
+        var height = $("#happy-pet-placeholder").height();
+        var height2 = $("#tech-feeding-bowl").height();
+        var heightTemp = height + 138;
+        if (nowHeight >= heightTemp && nowHeight <= (heightTemp + size.height + 371)) {
+            var marginTop = marginFromEmotional + (nowHeight - heightTemp) * (marginToEmotional -
                 marginFromEmotional) / (size
                 .height + 371);
             $("#tech-emotional-bg-wrap").animate({
                 'marginTop': marginTop + "px"
             }, 0);
         }
-        if (nowHeight >= 1848 && nowHeight <= (1848 + size.height + 455)) {
-            var marginTop = marginFromData + (nowHeight - 1848) * (marginToData - marginFromData) / (
+        heightTemp = height + 1228;
+        if (nowHeight >= heightTemp && nowHeight <= (heightTemp + size.height + 455)) {
+            var marginTop = marginFromData + (nowHeight - heightTemp) * (marginToData - marginFromData) / (
                 size
                 .height + 455);
             $("#tech-bigdata-bg-wrap").animate({
                 'marginTop': marginTop + "px"
             }, 0);
         }
-        if (nowHeight >= 3220 && nowHeight <= (3220 + size.height + 457)) {
-            var marginTop = marginFromPrecise + (nowHeight - 3220) * (marginToPrecise -
+        heightTemp = height + height2 + 2147;
+        if (nowHeight >= heightTemp && nowHeight <= (heightTemp + size.height + 457)) {
+            var marginTop = marginFromPrecise + (nowHeight - heightTemp) * (marginToPrecise -
                 marginFromPrecise) / (size
                 .height + 457);
             $("#tech-precise-bg-wrap").animate({
                 'marginTop': marginTop + "px"
             }, 0);
         }
-        if (nowHeight >= 958 && pageTwoFlag === true) {
+        if (nowHeight >= height + 338 && pageTwoFlag === true) {
             pageTwoFlag = false;
             $("#tech-better-connection h1").myFadeIn();
             setTimeout(function () {
@@ -52,7 +192,7 @@ $(document).ready(function () {
             }, 500);
         }
         console.log(nowHeight);
-        if (nowHeight >= 1478 && pageThreeFlag === true) {
+        if (nowHeight >= height + 858 && pageThreeFlag === true) {
 
             pageThreeFlag = false;
             $("#tech-health h1").myFadeIn();
@@ -166,13 +306,13 @@ $(document).ready(function () {
                 }, 200);
             }, 3600);
         }
-        if (nowHeight >= 2188 && pageFourFlag === true) {
+        if (nowHeight >= height + 1568 && pageFourFlag === true) {
             pageFourFlag = false;
             setTimeout(function () {
                 $("#tech-big-data-content p").myFadeIn();
             }, 500);
         }
-        if (nowHeight >= 2970 && pageSixFlag === true) {
+        if (nowHeight >= height + 2350 && pageSixFlag === true) {
             pageSixFlag = false;
             $("#tech-feeding-bowl .left-part img").animate({
                 "left": "0px"
@@ -202,6 +342,11 @@ $(document).ready(function () {
                     }, 200);
                 }, 300);
             }, 1400);
+            setTimeout(function () {
+                if (size.width < 940) {
+                    resizeScroll();
+                }
+            }, 2000);
         }
         if (nowHeight >= 3400 && pageSevenFlag === true) {
             pageSevenFlag = false;
@@ -220,7 +365,9 @@ $(document).ready(function () {
         }
         if (nowHeight >= 3780 && pageEightFlag === true) {
             pageEightFlag = false;
-            $("#motion-hand-phone").fadeIn(200);
+            if (!$("#motion-hand-phone").hasClass("hide")) {
+                $("#motion-hand-phone").fadeIn(200);
+            }
             setTimeout(function () {
                 $("#tech-motion-detect h1").myFadeIn();
                 setTimeout(function () {
@@ -445,21 +592,23 @@ $(document).ready(function () {
         });
     };
     var resizeScroll = function () {
-        marginToEmotional = 753;
-        marginFromEmotional = scrollPic(1920, 937, 371, 753, $("#tech-emotional-bg-wrap"), $(
-            "#tech-emotional-bg"));
-        marginToData = 1838;
+        var height = $("#happy-pet-placeholder").height();
+        var height2 = $("#tech-feeding-bowl").height();
+        marginToEmotional = height + 133;
+        marginFromEmotional = scrollPic(1920, 937, 371, marginToEmotional, $("#tech-emotional-bg-wrap"), $(
+            "#tech-emotional-bg"), null, null, false);
+        marginToData = height + 1218;
         marginFromData = scrollPic(1920, 1367, 455, marginToData, $("#tech-bigdata-bg-wrap"), $(
-            "#tech-bigdata-bg"));
-        marginToPrecise = 3213;
+            "#tech-bigdata-bg"), null, null, false);
+        if (height2 > 600) {
+            marginToPrecise = height + height2 + 2000;
+        } else {
+            marginToPrecise = height + height2 + 2143;
+        }
         marginFromPrecise = scrollPic(1920, 1344, 457, marginToPrecise, $("#tech-precise-bg-wrap"), $(
-            "#tech-precise-bg"));
+            "#tech-precise-bg"), null, null, false);
     };
-    size = getViewSizeWithoutScrollbar();
-    resizePetSystem();
-    resizePhotoShow();
-    resizeTechPower();
-    resizeScroll();
+    resizeFunc();
 
     pageThreeFlag = pageTwoFlag = pageFourFlag = pageSixFlag = pageSevenFlag = pageEightFlag = pageNineFlag =
         pageTenFlag = true;
