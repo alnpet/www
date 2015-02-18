@@ -12,20 +12,20 @@
         </div>
         <div class="first-customer clearfix">
             <p class="intro">
-                <img src="images/order circle arrow.png" alt="circle arrow" />
+                <img src="./images/order circle arrow.png" alt="circle arrow" />
                 <span>Be one of the first <br/></span><span class="focus">100 cutomers</span> <span><br/>to pre-order and you’ll <br/>be eligible for this <br/>amazing offer</span> 
             </p>
             <div class="feeder-collar-add">
                 <div class="order-product-each feeder">
                     <div class="product-img">
-                        <img src="images/feeder.png" alt="feeder" />
+                        <img src="./images/feeder.png" alt="feeder" />
                     </div>
                     <div class="product-intro">Smart <span class="focus">FEEDER</span></div>
                 </div>
                 <div class="add-icon">+</div>
                 <div class="order-product-each collar">
                     <div class="product-img">
-                        <img src="images/collar.png" alt="collar" />
+                        <img src="./images/collar.png" alt="collar" />
                     </div>
                     <div class="product-intro">Smart <span class="focus">COLLAR</span></div>
                 </div>

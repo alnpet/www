@@ -1,4 +1,4 @@
-<script type="text/javascript" src="js/jquery.form.js"></script>
+<script type="text/javascript" src="./js/jquery.form.js"></script>
 <div id="main-bg-hover" class="addition-tpl"></div>
 <div id="newsletter-popout-wrap">
 	<div id="newsletter-popout" class="addition-tpl popout">

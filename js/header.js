@@ -252,8 +252,8 @@ var newsletterShow = function () {
 };
 $(document).ready(function () {
     var options = {
-        url: 'www.baidu.com',
-        type: 'post',
+        url: 'http://www.alnpet.com/ajax/newsletter?op=signup',
+        type: 'get',
         dataType: 'text',
         success: function (data) {
 
