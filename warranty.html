@@ -1,0 +1,121 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>alnpet</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+    <link rel="stylesheet" href="css/common.css" type="text/css" />
+    <script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
+    <script type="text/javascript" src="js/header.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $(".faq-category-each.feeder").addClass("click");
+            $(".faq-category-each.feeder .down-arrow-wrap").show();
+            $(".faq-detail-each.feeder").show();
+            $(".faq-category-each").on("mouseenter", function(){
+                $(this).find(".down-arrow-wrap").show();
+            }).on("mouseleave", function(){
+                if(!$(this).hasClass("click")){
+                    $(this).find(".down-arrow-wrap").hide();
+                }
+            })
+            $(".faq-category-each").on("click", function(){
+                $(".faq-category-each").removeClass("click");
+                $(".faq-category-each").find(".down-arrow-wrap").hide();
+                $(this).find(".down-arrow-wrap").show();
+                $(this).addClass("click");
+                $(".faq-detail-each").hide();
+                if($(this).hasClass("feeder")){
+                    $(".faq-detail-each.feeder").show();
+                }
+                if($(this).hasClass("collar")){
+                    $(".faq-detail-each.collar").show();
+                }
+                if($(this).hasClass("general")){
+                    $(".faq-detail-each.general").show();
+                }
+            })
+        });
+    </script>
+</head>
+<body>
+    <div id="top-nav" class="center clearfix">
+        <div id="top-nav-content">
+            <div class="news-letter-button" class="top-nav-button">
+                <img src="images/news-letter.png" alt="news-letter" class="news-letter-icon" />
+                <div class="intro">JOIN NEWSLETTER</div>
+            </div>
+            <div id="top-nav-small-button-wrap">
+                <a href="http://facebook.com/alnpet"><img src="images/facebook_off.gif" alt="facebook" class="social-media-img" /></a>
+                <a href="http://twitter.com/alnpet"><img src="images/twitter_off.gif" alt="twitter" class="social-media-img" /></a>
+                <a href="http://pinterest.com/alnpetinc"><img src="images/pinterest_off.gif" alt="pinterest" class="social-media-img" /></a>
+            </div>
+            <div id="top-nav-right-button-wrap">
+                <a href="aboutus.html"><div class="top-nav-right-button">ABOUT US</div></a>
+                <a href="mailto:info@alnpet.com"><div class="top-nav-right-button">CONTACT</div></a>
+                <a href="news.html"><div class="top-nav-right-button">NEWS</div></a>
+            </div>
+        </div>
+    </div>
+    <div id="logo-line" class="center clearfix">
+        <a href="index.html"><div class="logo">
+            <img src="images/LOGO.png" alt="logo" class="logo-img" />
+            <div class="intro">MAKING TAILS WAG</div>
+        </div></a>
+        <div id="page-direct-line">
+            <a href="feeder.html"><div class="page-direct-line-each focus">Smart FEEDER</div></a>
+            <a href="collar.html"><div class="page-direct-line-each focus">Smart COLLAR</div></a>
+            <a href="tech.html"><div class="page-direct-line-each">Technology</div></a>
+            <a href="accessories.html"><div class="page-direct-line-each">Accessories</div></a>
+            <a href="faq.html"><div class="page-direct-line-each">FAQ’s</div></a>
+            <div id="pre-order-button">PRE-ORDER</div>
+        </div>
+    </div>
+    <div id="warranty-content">
+        <div class="title-line">
+            <h1>WARRANTY</h1>
+        </div>
+        <div id="warranty-detail">
+            <div class="center clearfix">
+                <h2>One-year limited consumer warranty</h2>
+                <p><span class="focus">Warrantor: </span>This one-year limited consumer warranty ("Warranty") is issued by ALNpet, a California corporation, headquartered in San Francisco, doing business as ALNpet ("ALNpet").</p>
+                <p><span class="focus">Warrantee:</span> ALNpet issues this Warranty to a consumer ("Consumer" or "you") who buys a new, covered device from an authorized reseller. This Warranty cannot be assigned or transferred to any subsequent purchaser or user.</p>
+                <p><span class="focus">Covered Devices:</span> A new, physical ALNpet hardware device ("Device") is covered by this Warranty if ALNpet includes this Warranty in the original packaging or if ALNpet offers or references this Warranty as part of an online sales or product set-up process. Product registration is not required as a condition to warranty coverage, but some ALNpet products function fully only if they are connected to an online ALNpet account.</p>
+                <p><span class="focus">Covered Devices:</span> A new, physical ALNpet hardware device ("Device") is covered by this Warranty if ALNpet includes this Warranty in the original packaging or if ALNpet offers or references this Warranty as part of an online sales or product set-up process. Product registration is not required as a condition to warranty coverage, but some ALNpet products function fully only if they are connected to an online ALNpet account.</p>
+                <p><span class="focus">Warranted Functionality:</span> ALNpet warrants to the Consumer that the Device will under normal use function substantially in accordance with ALNpet’s technical specifications or accompanying product documentation ("Warranted Functionality") for a period of one (1) year from date of original purchase ("Warranty Period"). If and to the extent the Device needs ALNpet software or services to achieve the Warranted Functionality, ALNpet will make and keep software and services available during the Warranty Period provided, however, that ALNpet may update, modify or limit such software and services at ALNpet’s sole discretion so long as the Warranted Functionality is maintained or exceeded.</p>
+                <p><span class="focus">Exclusions:</span> This Warranty is limited and is not applicable to: (i) normal wear and tear; (ii) defects or damage caused by misuse, accident (including without limitation collision, fire and the spillage of food or liquid), neglect, abuse, alteration, unusual stress, modification, improper or unauthorized repair, installation, wiring, or testing, improper storage, use with unsuitable devices, software or services; (iii) use not in accordance with the documentation; (iv) damage caused by third party equipment with which the Device is used; (v) commercial use or resale, (iv) used or resold products; (v) use for medical, healthcare or treatment purposes; and (vi) features or performance parameters pertaining to any software or services beyond the Warranted Functionality of the Device. For purposes of clarification, without limiting the generality of the preceding exclusions, this Warranty does not include any specific guarantees regarding uptime or continued availability, data security features of apps or online accounts or that any software, firmware or online sites will function uninterrupted or error-free. This limited warranty is void if a Device is returned with removed, damaged or tampered labels or any alterations (including the unauthorized removal of any component or external cover). This limited warranty does not cover data loss; back up, write down and/or print out your data on a regular basis. Also, consequential damages; incidental damages; and costs related to data recovery, removal, and installation are not recoverable under this warranty. Except as set forth in this Warranty, ALNpet does not extend any express or implied warranties or representations regarding the Device or any connected software or online services.</p>
+                <p>UNDER THIS WARRANTY, ALNPET DOES NOT ASSUME ANY LIABILITY FOR ANY SPECIAL, INDIRECT, INCIDENTAL, PUNITIVE OR CONSEQUENTIAL DAMAGES OF ANY NATURE WHATSOEVER INCLUDING BUT NOT LIMITED TO LOSS OF PROFITS OR REVENUES, LOSS OF DATA, LOSS OF USE OF THE DEVICE OR ANY ASSOCIATED EQUIPMENT, COST OF ANY REPLACEMENT GOODS OR SUBSTITUTE EQUIPMENT, LOSS OF USE DURING THE PERIOD THAT THE DEVICE IS BEING REPAIRED, CLAIMS OF ANY THIRD PARTIES, OR ANY OTHER DAMAGES ARISING FROM ALNPET'S BREACH OF THIS LIMITED WARRANTY OR THE USE OF THE DEVICE, REGARDLESS OF THE FORM OF ACTION WHETHER IN CONTRACT, TORT (INCLUDING NEGLIGENCE) OR ANY OTHER LEGAL OR EQUITABLE THEORY.</p>
+                <p>The laws of the State of California, USA, govern this limited warranty. It gives you specific legal rights, and you may also have other rights that vary from state to state. This limited warranty does not affect any additional rights you have under laws in your jurisdiction governing the sale of consumer goods, including, without limitation, national laws implementing EC Directive 99/44. Some states do not allow the exclusion or limitation of incidental or consequential damages, so the limitations or exclusions in this limited warranty statement may not apply to you.</p>
+                <p><span class="focus">Remedies:</span> Consumer's sole and exclusive remedy under this Warranty, and ALNpet's sole and exclusive responsibility under this Warranty is that ALNpet will, at ALNpet's option, either repair or replace the defective Device or update software or services so that the Device performs substantially the Warranted Functionality. Any replacement may be, at the option of ALNpet, a new or remanufactured Device. If ALNpet, in its sole discretion, determines it is not reasonable to replace the defective Device, ALNpet may refund to Consumer the purchase price paid for the Device. This Warranty gives you specific legal rights, and you may also have other rights that vary from state to state.</p>
+                <p><span class="focus">Claims process:</span> To obtain remedies under this Warranty, ALNpet must receive Consumer’s claim before the end of the Warranty Period. Consumer must obtain a Return Material Authorization ("RMA") from ALNpet and return the defective Device together with proof of purchase to the address specified by ALNpet in connection with the RMA. Consumer shall bear the cost of shipping the Device to ALNpet. By sending the Device, Consumer agrees to transfer ownership to ALNpet. ALNpet may not return the original Device to Consumer. Any replacement Device will not contain Consumer’s data. ALNpet warrants that any repaired or replaced Device is covered for the greater of either the remainder of the original Warranty Period or 90 days following Consumer’s receipt of the repaired or replacement Device. If the claim is justified based on this Warranty, ALNpet shall bear the cost of shipping the repaired or replacement Device to the Consumer. Any product returned to ALNpet without a valid warranty claim or without a RMA may be rejected, returned at sender’s cost (subject to prepayment) or kept for 30 days for sender’s pick-up and then disposed of in ALNpet’s sole discretion.</p>
+                <h3>Questions? To initiate warranty claims, obtain an RMA or<br/>ask questions, please contact us at <a href="mailto:support@ALNpet.com">support@ALNpet.com.</a></h3>
+            </div>
+        </div>
+    </div>
+    <img src="images/rainbow line.png" alt="rainbow" class="rainbox" />
+    <div id="bottom-nav-wrap">
+        <div id="bottom-nav" class="center clearfix">
+            <div class="logo">
+                <img src="images/LOGO.png" class="logo-img" alt="logo" />
+                <div class="intro">MAKING TAILS WAG</div>
+            </div>
+            <div id="bottom-nav-right-wrap">
+                <div class="clearfix">
+                    <div id="bottom-nav-small-button-wrap">
+                        <a href="http://facebook.com/alnpet"><img src="images/facebook_off.gif" alt="facebook" class="social-media-img" /></a>
+                        <a href="http://twitter.com/alnpet"><img src="images/twitter_off.gif" alt="twitter" class="social-media-img" /></a>
+                        <a href="http://pinterest.com/alnpetinc"><img src="images/pinterest_off.gif" alt="pinterest" class="social-media-img" /></a>
+                        <div class="news-letter-button" class="top-nav-button">
+                            <img src="images/news-letter.png" alt="news-letter" class="news-letter-icon" />
+                            <div class="intro">JOIN NEWSLETTER</div>
+                        </div>
+                    </div>
+                </div>
+                <div id="copyright-line" class="clearfix">
+                    @ ALNpet 2015. All rights reserved. <a href="terms.html">Terms of Use</a> | <a href="privacy.html">Privacy Policy</a> | Returns | <a href="warranty.html">Warranty</a> | API Terms of Service
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

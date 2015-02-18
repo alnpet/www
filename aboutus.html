@@ -1,0 +1,119 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>alnpet</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+    <link rel="stylesheet" href="css/common.css" type="text/css" />
+    <script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
+    <script type="text/javascript" src="js/header.js"></script>
+    <script type="text/javascript">
+        var resizeFunc = function(){
+            size = getViewSizeWithoutScrollbar();
+            var wrapWidth = size.width;
+            var heightTemp = size.height-273;
+            var wrapHeight = 590;
+            resizePic(wrapWidth,wrapHeight,1920,1344,$("#animal-lover-img-wrap"),$("#animal-lover-img"),"top");
+            wrapWidth = size.width/2;
+            wrapHeight = 505; 
+            resizePic(wrapWidth,wrapHeight,711,505,$(".about-us-img-wrap"),$(".about-us-img"));
+            $(".about-us-picture .content-wrap").css("max-width",wrapWidth+"px");
+        };
+        $(document).ready(function(){
+            resizeFunc();
+        });
+        $(window).resize(function(){
+            resizeFunc();
+        })
+    </script>
+</head>
+<body>
+    <div id="top-nav" class="center clearfix">
+        <div id="top-nav-content">
+            <div class="news-letter-button" class="top-nav-button">
+                <img src="images/news-letter.png" alt="news-letter" class="news-letter-icon" />
+                <div class="intro">JOIN NEWSLETTER</div>
+            </div>
+            <div id="top-nav-small-button-wrap">
+                <a href="http://facebook.com/alnpet"><img src="images/facebook_off.gif" alt="facebook" class="social-media-img" /></a>
+                <a href="http://twitter.com/alnpet"><img src="images/twitter_off.gif" alt="twitter" class="social-media-img" /></a>
+                <a href="http://pinterest.com/alnpetinc"><img src="images/pinterest_off.gif" alt="pinterest" class="social-media-img" /></a>
+            </div>
+            <div id="top-nav-right-button-wrap">
+                <a href="aboutus.html"><div class="top-nav-right-button">ABOUT US</div></a>
+                <a href="mailto:info@alnpet.com"><div class="top-nav-right-button">CONTACT</div></a>
+                <a href="news.html"><div class="top-nav-right-button">NEWS</div></a>
+            </div>
+        </div>
+    </div>
+    <div id="logo-line" class="center clearfix">
+        <a href="index.html"><div class="logo">
+            <img src="images/LOGO.png" alt="logo" class="logo-img" />
+            <div class="intro">MAKING TAILS WAG</div>
+        </div></a>
+        <div id="page-direct-line">
+            <a href="feeder.html"><div class="page-direct-line-each focus">Smart FEEDER</div></a>
+            <a href="collar.html"><div class="page-direct-line-each focus">Smart COLLAR</div></a>
+            <a href="tech.html"><div class="page-direct-line-each">Technology</div></a>
+            <a href="accessories.html"><div class="page-direct-line-each">Accessories</div></a>
+            <a href="faq.html"><div class="page-direct-line-each">FAQ’s</div></a>
+            <div id="pre-order-button">PRE-ORDER</div>
+        </div>
+    </div>
+    <div id="about-us-content">
+        <div id="animal-lover">
+            <div id="animal-lover-img-wrap" class="scroll-bg-wrap">
+                <img src="images/aboutus_background_hero.jpg" alt="" id="animal-lover-img" />
+            </div>
+            <div class="center clearfix">
+                <h1>We’re animal lovers,<br/>pet parents and<br/>technologists</h1>
+            </div>
+        </div>
+        <div id="about-us-picture-one" class="about-us-picture">
+            <div class="about-us-img-wrap">
+                <img src="images/family.png" alt="family" class="about-us-img" />
+            </div>
+            <div class="center clearfix">
+                <div class="content-wrap">
+                    <p>We know how important your pet’s health and wellness is. How many times have you wished that your dog could tell you how he’s feeling? As fellow pet parents, we understand this. ALNpet was born from our desire to <span class="focus">improve human-to-pet communication to ensure their health and wellbeing.</span></p>
+                </div>
+            </div>
+        </div>
+        <div id="about-us-picture-two" class="about-us-picture">
+            <div class="about-us-img-wrap">
+                <img src="images/man on computer.png" alt="man on computer" class="about-us-img" />
+            </div>
+            <div class="center clearfix">
+                <div class="content-wrap">
+                    <p>We combined our deep technological expertise with a love of animals to build <span class="focus">The Ultimate Happy Pet System.</span> Our product, built with state-of-the-art, intelligent technology, was designed specifically to improve communication between you and your pet, enabling you to better understand their physical and emotional needs. Finally, you and your pet can “speak the same language.”</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <img src="images/rainbow line.png" alt="rainbow" class="rainbox" />
+    <div id="bottom-nav-wrap">
+        <div id="bottom-nav" class="center clearfix">
+            <div class="logo">
+                <img src="images/LOGO.png" class="logo-img" alt="logo" />
+                <div class="intro">MAKING TAILS WAG</div>
+            </div>
+            <div id="bottom-nav-right-wrap">
+                <div class="clearfix">
+                    <div id="bottom-nav-small-button-wrap">
+                        <a href="http://facebook.com/alnpet"><img src="images/facebook_off.gif" alt="facebook" class="social-media-img" /></a>
+                        <a href="http://twitter.com/alnpet"><img src="images/twitter_off.gif" alt="twitter" class="social-media-img" /></a>
+                        <a href="http://pinterest.com/alnpetinc"><img src="images/pinterest_off.gif" alt="pinterest" class="social-media-img" /></a>
+                        <div class="news-letter-button" class="top-nav-button">
+                            <img src="images/news-letter.png" alt="news-letter" class="news-letter-icon" />
+                            <div class="intro">JOIN NEWSLETTER</div>
+                        </div>
+                    </div>
+                </div>
+                <div id="copyright-line" class="clearfix">
+                    @ ALNpet 2015. All rights reserved. <a href="terms.html">Terms of Use</a> | <a href="privacy.html">Privacy Policy</a> | Returns | <a href="warranty.html">Warranty</a> | API Terms of Service
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

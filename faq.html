@@ -1,0 +1,229 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>alnpet</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+    <link rel="stylesheet" href="css/common.css" type="text/css" />
+    <script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
+    <script type="text/javascript" src="js/header.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $(".faq-category-each.feeder").addClass("click");
+            $(".faq-category-each.feeder .down-arrow-wrap").show();
+            $(".faq-detail-each.feeder").show();
+            $(".faq-category-each").on("mouseenter", function(){
+                $(this).find(".down-arrow-wrap").show();
+            }).on("mouseleave", function(){
+                if(!$(this).hasClass("click")){
+                    $(this).find(".down-arrow-wrap").hide();
+                }
+            })
+            $(".faq-category-each").on("click", function(){
+                $(".faq-category-each").removeClass("click");
+                $(".faq-category-each").find(".down-arrow-wrap").hide();
+                $(this).find(".down-arrow-wrap").show();
+                $(this).addClass("click");
+                $(".faq-detail-each").hide();
+                if($(this).hasClass("feeder")){
+                    $(".faq-detail-each.feeder").show();
+                }
+                if($(this).hasClass("collar")){
+                    $(".faq-detail-each.collar").show();
+                }
+                if($(this).hasClass("general")){
+                    $(".faq-detail-each.general").show();
+                }
+            })
+        });
+    </script>
+</head>
+<body>
+    <div id="top-nav" class="center clearfix">
+        <div id="top-nav-content">
+            <div class="news-letter-button" class="top-nav-button">
+                <img src="images/news-letter.png" alt="news-letter" class="news-letter-icon" />
+                <div class="intro">JOIN NEWSLETTER</div>
+            </div>
+            <div id="top-nav-small-button-wrap">
+                <a href="http://facebook.com/alnpet"><img src="images/facebook_off.gif" alt="facebook" class="social-media-img" /></a>
+                <a href="http://twitter.com/alnpet"><img src="images/twitter_off.gif" alt="twitter" class="social-media-img" /></a>
+                <a href="http://pinterest.com/alnpetinc"><img src="images/pinterest_off.gif" alt="pinterest" class="social-media-img" /></a>
+            </div>
+            <div id="top-nav-right-button-wrap">
+                <a href="aboutus.html"><div class="top-nav-right-button">ABOUT US</div></a>
+                <a href="mailto:info@alnpet.com"><div class="top-nav-right-button">CONTACT</div></a>
+                <a href="news.html"><div class="top-nav-right-button">NEWS</div></a>
+            </div>
+        </div>
+    </div>
+    <div id="logo-line" class="center clearfix">
+        <a href="index.html"><div class="logo">
+            <img src="images/LOGO.png" alt="logo" class="logo-img" />
+            <div class="intro">MAKING TAILS WAG</div>
+        </div></a>
+        <div id="page-direct-line">
+            <a href="feeder.html"><div class="page-direct-line-each focus">Smart FEEDER</div></a>
+            <a href="collar.html"><div class="page-direct-line-each focus">Smart COLLAR</div></a>
+            <a href="tech.html"><div class="page-direct-line-each">Technology</div></a>
+            <a href="accessories.html"><div class="page-direct-line-each">Accessories</div></a>
+            <a href="faq.html"><div class="page-direct-line-each">FAQ’s</div></a>
+            <div id="pre-order-button">PRE-ORDER</div>
+        </div>
+    </div>
+    <div id="faq-content">
+        <div class="title-line">
+            <div class="center">
+                <h1>Frequently asked questions</h1>
+            </div>
+        </div>
+        <div id="faq-detail-content">
+            <div class="center clearfix">
+                <div id="faq-category-choose">
+                    <div class="faq-category-each feeder">
+                        <p class="intro">Smart <span class="focus">FEEDER</p>
+                        <div class="down-arrow-wrap">
+                            <div class="down-arrow"></div>
+                        </div>
+                    </div>
+                    <div class="faq-category-each collar">
+                        <p class="intro">Smart <span class="focus">COLLAR</p>
+                        <div class="down-arrow-wrap">
+                            <div class="down-arrow"></div>
+                        </div>
+                    </div>
+                    <div class="faq-category-each general">
+                        <p class="intro"><span class="focus">GENERAL</p>
+                        <div class="down-arrow-wrap">
+                            <div class="down-arrow"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-detail-each feeder">
+                    <div class="question-wrap">
+                        <h2 class="question">How do I keep the Smart FEEDER clean?</h2>
+                        <p class="answer">The Smart FEEDER storage bin and feeding bowl can be removed for hand cleaning using mild dish detergent. You should know that the independent food delivery channel remains closed while feeding so no food falls back inside the chamber, assuring no mold growth inside the machine.</p>
+                    </div>
+                     <div class="question-wrap">
+                        <h2 class="question">How do I keep the Smart FEEDER clean?</h2>
+                        <p class="answer">The Smart FEEDER storage bin and feeding bowl can be removed for hand cleaning using mild dish detergent. You should know that the independent food delivery channel remains closed while feeding so no food falls back inside the chamber, assuring no mold growth inside the machine.</p>
+                    </div>
+                     <div class="question-wrap">
+                        <h2 class="question">What happens if food gets stuck in the machine?</h2>
+                        <p class="answer">Initially the Smart FEEDER will attempt self-healing by operating counter clockwise. If that fails, you will be alerted on the Smart APP that the Smart FEEDER needs your hands-on assistance.</p>
+                    </div>
+                     <div class="question-wrap">
+                        <h2 class="question">Does the Smart FEEDER supply water?</h2>
+                        <p class="answer">No. Currently it can not supply water.</p>
+                    </div>
+                     <div class="question-wrap">
+                        <h2 class="question">Does the Smart FEEDER support wet food?</h2>
+                        <p class="answer">No. Currently it can only operate with dry food.</p>
+                    </div>
+                     <div class="question-wrap">
+                        <h2 class="question">How does the Smart FEEDER know if my dog ate all the dispensed food?</h2>
+                        <p class="answer">The retractable feeding bowl is equipped with a smart electronic scale function to accurately weight any remaining food in the bowl. This data is then sent to the Smart Big-Data Center for analysis.</p>
+                    </div>
+                     <div class="question-wrap">
+                        <h2 class="question">What happens if there’s a power outage?</h2>
+                        <p class="answer">Don’t worry! The Smart FEEDER is equipped with a lithium battery that allows the machine to work up to seven days without electric power.</p>
+                    </div>
+                     <div class="question-wrap">
+                        <h2 class="question">Can I use the Smart FEEDER outside?</h2>
+                        <p class="answer">Yes you can. Thanks to the lithium battery inside, you may bring the Smart FEEDER anywhere you like. Just avoid direct sunlight to ensure preferred working temperature of -20 ° C ~ 70 °.</p>
+                    </div>
+                     <div class="question-wrap">
+                        <h2 class="question">Do I have to worry about my dog damaging the Smart FEEDER?</h2>
+                        <p class="answer">Nope. The Smart FEEDER is constructed from strongly structured, high-strength nano-materials, through a shell thickening process using internal rib settings. The exterior design is smooth and wear-resistant. The retractable feeding bowl retracts after a specified amount of time after feeding—to ensure no damage to the moving parts.</p>
+                    </div>
+                     <div class="question-wrap">
+                        <h2 class="question">How do I know when to refill the food storage bin?</h2>
+                        <p class="answer">The Smart APP will alert you when the food reserve is less than 20%.</p>
+                    </div>
+                     <div class="question-wrap">
+                        <h2 class="question">Will my dog be able to open the food storage bin?</h2>
+                        <p class="answer">Not unless he’s a super dog! The vertical storage silo under the lid cover is locked by about two fasteners. Simply press the PUSH button on the side of the Smart FEEDER and the cover pops open for easy filling.</p>
+                    </div>
+                </div>
+                <div class="faq-detail-each collar">
+                    <div class="question-wrap">
+                        <h2 class="question">Does the Smart COLLAR have GPS capabilities?</h2>
+                        <p class="answer">No. The goal of the Smart COLLAR is to allow accurate tracking of your pet’s movement through the Smart Big-Data Center and guide the Smart FEEDER for healthy feeding. It also analyzes pet behavior to better understand all aspects of your pet’s health and mood status. In addition, adding GPS to a dog collar significantly increases the size and weight, which for smaller dogs is not applicable, not to mention that it will greatly reduce battery life.</p>
+                    </div>
+                     <div class="question-wrap">
+                        <h2 class="question">Do I have to worry about synchronizing the Smart COLLAR to avoid data loss?</h2>
+                        <p class="answer">Absolutely not. The Bluetooth technology inside the Smart COLLAR automatically transmits data to the Smart FEEDER, which in turn sends it to the Smart Big-Data Center for analysis. The Smart COLLAR will automatically upload data every time your dog feeds.</p>
+                    </div>
+                     <div class="question-wrap">
+                        <h2 class="question">How does the Smart COLLAR calculate my dog’s exercise goals?</h2>
+                        <p class="answer">Based on your dog’s breed, age and weight, the Smart Big-Data Center continuously calculates the data sent from the Smart COLLAR, developing appropriate daily exercise goals. You may also manually set goals of your own.</p>
+                    </div>
+                     <div class="question-wrap">
+                        <h2 class="question">Is the Smart COLLAR waterproof?</h2>
+                        <p class="answer">Yes, so jump in! We’ve done extensive testing to ensure the Smart COLLAR will continue to work after repeated water exposure.</p>
+                    </div>
+                     <div class="question-wrap">
+                        <h2 class="question">Will the Smart COLLAR work outside the United States?</h2>
+                        <p class="answer">Yes. It can be used worldwide. So get packing.</p>
+                    </div>
+                     <div class="question-wrap">
+                        <h2 class="question">Can my cat wear the Smart COLLAR?</h2>
+                        <p class="answer">Sure, but currently we do not recommend it. Our algorithm program is optimized for dogs, so the tracking may not be accurate. We’ve have started work on a cat algorithm and we hope to release it in the near future.</p>
+                    </div>
+                </div>
+                <div class="faq-detail-each general">
+                    <div class="question-wrap">
+                        <h2 class="question">Where can I get more information about ALNpet?</h2>
+                        <p class="answer">Send us an email at info@ALNpet.com. We’re happy to answer any questions you may have.</p>
+                    </div>
+                     <div class="question-wrap">
+                        <h2 class="question">How much do your products cost?</h2>
+                        <p class="answer">The Smart FEEDER retail price is $299 per unit. The Smart COLLAR retail price is coming soon.</p>
+                    </div>
+                     <div class="question-wrap">
+                        <h2 class="question">I live outside the US. Can I still pre-order?</h2>
+                        <p class="answer">Yes you can, but please refer to the terms of all promotions.</p>
+                    </div>
+                     <div class="question-wrap">
+                        <h2 class="question">Is the wireless connection secure?</h2>
+                        <p class="answer">Sure is. Our products use the latest cloud security technology available—using innovative data compression and decompression to ensure the safety and reliability of all data transmission.</p>
+                    </div>
+                     <div class="question-wrap">
+                        <h2 class="question">Can more than one pet use the system?</h2>
+                        <p class="answer">At this time, no. The four parts of The Ultimate Happy Pet System—Smart COLLAR, Smart FEEDER, Smart Big-Data Center and the Smart APP—are only able to track and manage one dog.</p>
+                    </div>
+                     <div class="question-wrap">
+                        <h2 class="question">If the wireless network becomes abnormal, will the Smart FEEDER still work?</h2>
+                        <p class="answer">Yes. If there are any WiFi network issues, the Smart APP will promptly alert you. Meanwhile, the Smart FEEDER will simply follow the default feeding schedule.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <img src="images/rainbow line.png" alt="rainbow" class="rainbox" />
+    <div id="bottom-nav-wrap">
+        <div id="bottom-nav" class="center clearfix">
+            <div class="logo">
+                <img src="images/LOGO.png" class="logo-img" alt="logo" />
+                <div class="intro">MAKING TAILS WAG</div>
+            </div>
+            <div id="bottom-nav-right-wrap">
+                <div class="clearfix">
+                    <div id="bottom-nav-small-button-wrap">
+                        <a href="http://facebook.com/alnpet"><img src="images/facebook_off.gif" alt="facebook" class="social-media-img" /></a>
+                        <a href="http://twitter.com/alnpet"><img src="images/twitter_off.gif" alt="twitter" class="social-media-img" /></a>
+                        <a href="http://pinterest.com/alnpetinc"><img src="images/pinterest_off.gif" alt="pinterest" class="social-media-img" /></a>
+                        <div class="news-letter-button" class="top-nav-button">
+                            <img src="images/news-letter.png" alt="news-letter" class="news-letter-icon" />
+                            <div class="intro">JOIN NEWSLETTER</div>
+                        </div>
+                    </div>
+                </div>
+                <div id="copyright-line" class="clearfix">
+                    @ ALNpet 2015. All rights reserved. <a href="terms.html">Terms of Use</a> | <a href="privacy.html">Privacy Policy</a> | Returns | <a href="warranty.html">Warranty</a> | API Terms of Service
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

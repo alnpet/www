@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>alnpet</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+    <link rel="stylesheet" href="css/common.css" type="text/css" />
+    <script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
+    <script type="text/javascript" src="js/header.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            size = getViewSizeWithScrollbar();
+            var wrapWidth = size.width;
+            var heightTemp = size.height-273;
+            var wrapHeight = heightTemp>300?heightTemp:300;
+            $("#accessory-content").css("height",wrapHeight+"px");
+            resizePic(wrapWidth,wrapHeight,1920,1344,$("#accessory-content-img-wrap"),$("#accessory-content-img"));
+        });
+        $(window).resize(function(){
+            size = getViewSizeWithScrollbar();
+            var wrapWidth = size.width;
+            var heightTemp = size.height-273;
+            var wrapHeight = heightTemp>300?heightTemp:300;
+            $("#accessory-content").css("height",wrapHeight+"px");
+            resizePic(wrapWidth,wrapHeight,1920,1344,$("#accessory-content-img-wrap"),$("#accessory-content-img"));
+        })
+    </script>
+</head>
+<body>
+    <div id="top-nav" class="center clearfix">
+        <div id="top-nav-content">
+            <div class="news-letter-button" class="top-nav-button">
+                <img src="images/news-letter.png" alt="news-letter" class="news-letter-icon" />
+                <div class="intro">JOIN NEWSLETTER</div>
+            </div>
+            <div id="top-nav-small-button-wrap">
+                <a href="http://facebook.com/alnpet"><img src="images/facebook_off.gif" alt="facebook" class="social-media-img" /></a>
+                <a href="http://twitter.com/alnpet"><img src="images/twitter_off.gif" alt="twitter" class="social-media-img" /></a>
+                <a href="http://pinterest.com/alnpetinc"><img src="images/pinterest_off.gif" alt="pinterest" class="social-media-img" /></a>
+            </div>
+            <div id="top-nav-right-button-wrap">
+                <a href="aboutus.html"><div class="top-nav-right-button">ABOUT US</div></a>
+                <a href="mailto:info@alnpet.com"><div class="top-nav-right-button">CONTACT</div></a>
+                <a href="news.html"><div class="top-nav-right-button">NEWS</div></a>
+            </div>
+        </div>
+    </div>
+    <div id="logo-line" class="center clearfix">
+        <a href="index.html"><div class="logo">
+            <img src="images/LOGO.png" alt="logo" class="logo-img" />
+            <div class="intro">MAKING TAILS WAG</div>
+        </div></a>
+        <div id="page-direct-line">
+            <a href="feeder.html"><div class="page-direct-line-each focus">Smart FEEDER</div></a>
+            <a href="collar.html"><div class="page-direct-line-each focus">Smart COLLAR</div></a>
+            <a href="tech.html"><div class="page-direct-line-each">Technology</div></a>
+            <a href="accessories.html"><div class="page-direct-line-each">Accessories</div></a>
+            <a href="faq.html"><div class="page-direct-line-each">FAQ’s</div></a>
+            <div id="pre-order-button">PRE-ORDER</div>
+        </div>
+    </div>
+    <div id="accessory-content">
+        <div id="accessory-content-img-wrap" class="scroll-bg-wrap">
+            <img src="images/accessories_background_hero.jpg" alt="" id="accessory-content-img" />
+        </div>
+        <div class="center clearfix">
+            <div id="comming-soon">
+                <h1>Coming Soon!</h1>
+                <p>Check back for some cool dog accessories from ALNpet.</p>
+            </div>
+        </div>
+    </div>
+    <img src="images/rainbow line.png" alt="rainbow" class="rainbox" />
+    <div id="bottom-nav-wrap">
+        <div id="bottom-nav" class="center clearfix">
+            <div class="logo">
+                <img src="images/LOGO.png" class="logo-img" alt="logo" />
+                <div class="intro">MAKING TAILS WAG</div>
+            </div>
+            <div id="bottom-nav-right-wrap">
+                <div class="clearfix">
+                    <div id="bottom-nav-small-button-wrap">
+                        <a href="http://facebook.com/alnpet"><img src="images/facebook_off.gif" alt="facebook" class="social-media-img" /></a>
+                        <a href="http://twitter.com/alnpet"><img src="images/twitter_off.gif" alt="twitter" class="social-media-img" /></a>
+                        <a href="http://pinterest.com/alnpetinc"><img src="images/pinterest_off.gif" alt="pinterest" class="social-media-img" /></a>
+                        <div class="news-letter-button" class="top-nav-button">
+                            <img src="images/news-letter.png" alt="news-letter" class="news-letter-icon" />
+                            <div class="intro">JOIN NEWSLETTER</div>
+                        </div>
+                    </div>
+                </div>
+                <div id="copyright-line" class="clearfix">
+                    @ ALNpet 2015. All rights reserved. <a href="terms.html">Terms of Use</a> | <a href="privacy.html">Privacy Policy</a> | Returns | <a href="warranty.html">Warranty</a> | API Terms of Service
+                </div>
+            </div>
+    </div>
+</body>
+</html>

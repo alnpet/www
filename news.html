@@ -1,0 +1,127 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>alnpet</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+    <link rel="stylesheet" href="css/common.css" type="text/css" />
+    <script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
+    <script type="text/javascript" src="js/header.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $(".faq-category-each.feeder").addClass("click");
+            $(".faq-category-each.feeder .down-arrow-wrap").show();
+            $(".faq-detail-each.feeder").show();
+            $(".faq-category-each").on("mouseenter", function(){
+                $(this).find(".down-arrow-wrap").show();
+            }).on("mouseleave", function(){
+                if(!$(this).hasClass("click")){
+                    $(this).find(".down-arrow-wrap").hide();
+                }
+            })
+            $(".faq-category-each").on("click", function(){
+                $(".faq-category-each").removeClass("click");
+                $(".faq-category-each").find(".down-arrow-wrap").hide();
+                $(this).find(".down-arrow-wrap").show();
+                $(this).addClass("click");
+                $(".faq-detail-each").hide();
+                if($(this).hasClass("feeder")){
+                    $(".faq-detail-each.feeder").show();
+                }
+                if($(this).hasClass("collar")){
+                    $(".faq-detail-each.collar").show();
+                }
+                if($(this).hasClass("general")){
+                    $(".faq-detail-each.general").show();
+                }
+            })
+        });
+    </script>
+</head>
+<body>
+    
+    <div id="top-nav" class="center clearfix">
+        <div id="top-nav-content">
+            <div class="news-letter-button" class="top-nav-button">
+                <img src="images/news-letter.png" alt="news-letter" class="news-letter-icon" />
+                <div class="intro">JOIN NEWSLETTER</div>
+            </div>
+            <div id="top-nav-small-button-wrap">
+                <a href="http://facebook.com/alnpet"><img src="images/facebook_off.gif" alt="facebook" class="social-media-img" /></a>
+                <a href="http://twitter.com/alnpet"><img src="images/twitter_off.gif" alt="twitter" class="social-media-img" /></a>
+                <a href="http://pinterest.com/alnpetinc"><img src="images/pinterest_off.gif" alt="pinterest" class="social-media-img" /></a>
+            </div>
+            <div id="top-nav-right-button-wrap">
+                <a href="aboutus.html"><div class="top-nav-right-button">ABOUT US</div></a>
+                <a href="mailto:info@alnpet.com"><div class="top-nav-right-button">CONTACT</div></a>
+                <a href="news.html"><div class="top-nav-right-button">NEWS</div></a>
+            </div>
+        </div>
+    </div>
+    <div id="logo-line" class="center clearfix">
+        <a href="index.html"><div class="logo">
+            <img src="images/LOGO.png" alt="logo" class="logo-img" />
+            <div class="intro">MAKING TAILS WAG</div>
+        </div></a>
+        <div id="page-direct-line">
+            <a href="feeder.html"><div class="page-direct-line-each focus">Smart FEEDER</div></a>
+            <a href="collar.html"><div class="page-direct-line-each focus">Smart COLLAR</div></a>
+            <a href="tech.html"><div class="page-direct-line-each">Technology</div></a>
+            <a href="accessories.html"><div class="page-direct-line-each">Accessories</div></a>
+            <a href="faq.html"><div class="page-direct-line-each">FAQ’s</div></a>
+            <div id="pre-order-button">PRE-ORDER</div>
+        </div>
+    </div>
+    <div id="news-content">
+        <div class="title-line">
+            <img src="images/news-dogs.png" alt="dogs" />
+        </div>
+        <div class="center clearfix">
+            <h1>NEWS</h1>
+            <div class="news-each">
+                <h2>ALNpet Inc. Launches the Ultimate Happy Pet System: Smart Feeder, Smart Collar & Smart App</h2>
+                <p>New York, NY – February 18, 2015 – Imagine if there’s a way to connect humans and pets physically and emotionally through self-learning technology. ALNpet, which stands for Aligned Pets, is on a mission to do just that and more. This unique and innovative company has worked with veterinarians to create products that will improve the lives of animals by enabling humans to better understand the health of their pets. ALNpet is excited to announce the launch of the ultimate pet happy system, which includes the Smart Feeder, Smart Collar and Smart App. Learn more about ALNpet at: <a href="http://ALNpet.com/">http://ALNpet.com/.</a></p>
+                <p>ALNpet’s overall mission is to provide scientific-driven data making it easier to understand what pets need to live a healthier, happier life. There are many communication barriers between pet owners and their four-legged friends. Since humans do not have the proper tools to communicate with their pets, it’s sometimes hard to determine if they’re feeling healthy and content. ALNpet has developed self-learning, integrated products to monitor our pet’s health and wellness continuously.  </p>
+                <p>It is important for pet parents to remember that proper nutrition and a balanced diet are essential elements for good health in a pet. Did you know 55 million US cats and 43.8 million US dogs are estimated to be overweight or obese? Unfortunately, pet obesity is a very serious health problem in today’s society and we must watch and monitor our four-legged friend’s intake carefully.   </p>
+                <p>The Smart Feeder is a unique and intelligent feeding system that has an automatic retractable feeding drawer. It stores our pet’s food and electronically weighs kibble. Smart Feeder includes video and voice communication, which allows us to monitor and communicate with our pets while we are away. The feeder has a sleek, modern design and links to the Smart App for remote management. </p>
+                <p>The Smart App and Smart Collar provide pet owners with daily updates about their pet’s behavior, including eating and exercise. This special app syncs with ALNpet products via Wifi, Bluetooth, and 2G/3G/4Gwireless network. The Smart App gives pet parents the opportunity to control the Smart Feeder remotely, watch Fido through video camera and talk to pet via microphone. In addition, the Smart App provides feeding suggestions and measuring portions depending on pets breed, age, amount of exercise, and weight.</p>
+                <p>Every pet owner wishes their pet could talk to express how they are feeling each day. Smart Collar is the world’s smallest and lightest tracking device designed for pets. This collar will give pet parents the power to collect data on activity and rest to determine what our pet is lacking. The collar device connects wirelessly to the Smart Feeder and Smart App, and has the ability to track movement to analyze exercise output. Not only is this collar fashionable and comfortable, but it’s waterproof and pet-safe too!</p>
+                <p>ALNpet will be holding a special launch reception on Tuesday March 3rd from 6-8pm at the Hyatt Regency in Orlando, Florida. Attendees will enjoy complimentary appetizers and adult beverages while watching a sneak peak product video by unveiling the launch of a three-in-one technology system to learn even more about your pet's activity and habits. Learn more about this event: <a href="https://www.eventbrite.com/e/youre-invited-alnpet-media-launch-party-tickets-15683543902">https://www.eventbrite.com/e/youre-invited-alnpet-media-launch-party-tickets-15683543902.</a></p>
+                <p>"Unfortunately, most people do not fully understand their pets’ needs. Pet owners need a trusted source they can depend on," expresses Ellen Yazao Li, Founder and President on ALNpet Inc., "We push the boundaries of creativity and technology, always trying to better our products to provide the most accurate assessment of your pet, which will ultimately lead to their overall health and well-being!"</p>
+                <p><strong>About ALNpet Inc.:</strong> <br/>
+                    ALNpet is the ultimate happy pet system! We are animal lovers, pet parents and technologists. We combined our deep technological expertise with a love of animals to build up state-of-art intelligent products to improve communications between you and your pets, keep them psychically and mentally healthy. Learn more at: <a href="http://ALNpet.com/">http://ALNpet.com/.</a> 
+                </p>
+                <p class="time">02.18.2015</p>
+            </div>
+            
+        </div>
+        
+        
+    </div>
+    <img src="images/rainbow line.png" alt="rainbow" class="rainbox" />
+    <div id="bottom-nav-wrap">
+        <div id="bottom-nav" class="center clearfix">
+            <div class="logo">
+                <img src="images/LOGO.png" class="logo-img" alt="logo" />
+                <div class="intro">MAKING TAILS WAG</div>
+            </div>
+            <div id="bottom-nav-right-wrap">
+                <div class="clearfix">
+                    <div id="bottom-nav-small-button-wrap">
+                        <a href="http://facebook.com/alnpet"><img src="images/facebook_off.gif" alt="facebook" class="social-media-img" /></a>
+                        <a href="http://twitter.com/alnpet"><img src="images/twitter_off.gif" alt="twitter" class="social-media-img" /></a>
+                        <a href="http://pinterest.com/alnpetinc"><img src="images/pinterest_off.gif" alt="pinterest" class="social-media-img" /></a>
+                        <div class="news-letter-button" class="top-nav-button">
+                            <img src="images/news-letter.png" alt="news-letter" class="news-letter-icon" />
+                            <div class="intro">JOIN NEWSLETTER</div>
+                        </div>
+                    </div>
+                </div>
+                <div id="copyright-line" class="clearfix">
+                    @ ALNpet 2015. All rights reserved. <a href="terms.html">Terms of Use</a> | <a href="privacy.html">Privacy Policy</a> | Returns | <a href="warranty.html">Warranty</a> | API Terms of Service
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
