@@ -291,11 +291,12 @@ var newsletterShow = function () {
 };
 $(document).ready(function () {
     var options = {
-        url: 'www.baidu.com',
+        url: '/ajax/newsletter?op=signup',
         type: 'post',
         dataType: 'text',
         success: function (data) {
-
+            alert("Submit successfully!");
+            $(".addition-tpl").remove();
         },
         error: function (data) {
             alert("Submit failed!");
