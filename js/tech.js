@@ -81,10 +81,17 @@ $(document).ready(function () {
                     "font-size": "22px"
                 });
             }
+            if (size.width < 1040) {
+                $("#tech-low-power .right-part").css("marginRight","0px");
+            }
+            else{
+                $("#tech-low-power .right-part").css("marginRight","-25px");
+            }
             if (size.width < 900) {
+                
                 $("#tech-low-power h1").css("color", "#333");
                 $("#tech-low-power p").css("color", "#999");
-            } else {
+            } else {                
                 $("#tech-low-power h1").css("color", "white");
                 $("#tech-low-power p").css("color", "white");
             }
@@ -560,7 +567,7 @@ $(document).ready(function () {
         var imgHeight = 455;
         var newWidth;
         var newHeight;
-        var wrapWidth = widthTemp > 990 ? widthTemp : 990;
+        var wrapWidth = widthTemp;
         var wrapHeight = 455;
         resizePic(wrapWidth, wrapHeight, imgWidth, imgHeight, $("#tech-low-power-bg-wrap"), $(
             "#tech-low-power-bg"));

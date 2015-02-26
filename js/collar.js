@@ -3,20 +3,32 @@ $(document).ready(function () {
         size = getViewSizeWithoutScrollbar();
         //$("#collar-smart-single").css("left", 0 - size.width + "px");
         resizeScroll();
+        if (size.width < 975) {
+            $("#collar-smart-pictures .right-part").hide();
+        } else {
+            $("#collar-smart-pictures .right-part").show();
+        }
+        if (size.width < 950) {
+            var marginLeft = parseInt((size.width - 139 * 4) / 3 - 10, 10);
+            $("#collar-special-wrap .collar-special-each").css("marginLeft", marginLeft + "px");
+            $("#collar-special-wrap").css("marginLeft", "-" + marginLeft + "px");
+        } else {
+
+        }
     };
     var resizeScroll = function () {
         var collarHeight = $("#collar-smart-collar").height();
-        marginToKitchen = collarHeight ;
+        marginToKitchen = collarHeight;
         // 183为中间隔断高度的一般防止覆盖
         marginFromKitchen = scrollPic(1920, 1324, $("#collar-finger").height(), marginToKitchen, $(
             "#collar-kitchen-bg-wrap"), $(
-            "#collar-kitchen-bg"), $("#collar-finger").height() + 400, "top");
+            "#collar-kitchen-bg"), $("#collar-finger").height() + 400, "top", false);
         marginToKitchen = marginToKitchen - 250;
         var collarHeight = $("#collar-smart-collar").height();
         marginToCity = collarHeight + 1070;
         marginFromCity = scrollPic(1920, 1283, $("#collar-specials").height(), marginToCity, $(
             "#collar-city-bg-wrap"), $(
-            "#collar-city-bg"), $("#collar-specials").height() + 183);
+            "#collar-city-bg"), $("#collar-specials").height() + 183, null, false);
     }
     popoutBind($(".collar-special-each.activity"), $(".feeder-addition-popout-wrap.activity"), 15, 15);
     popoutBind($(".collar-special-each.emotional"), $(".feeder-addition-popout-wrap.emotional"), 15, 15);

@@ -1,4 +1,15 @@
 $(document).ready(function () {
+    var resizeFunc = function () {
+        size = getViewSizeWithoutScrollbar();
+        scale = size.width / 990;
+        resizeDog();
+        resizeFeeder();
+        if (size.width < 990) {
+            changeScale($("#dog-process-bar"), 990, 400);
+        } else {
+            recoverScale($("#dog-process-bar"));
+        }
+    };
     var resizeDog = function () {
         var widthTemp = size.width;
         var imgWidth = 1920;
@@ -19,7 +30,7 @@ $(document).ready(function () {
         var imgHeight = 800;
         var newWidth;
         var newHeight;
-        var wrapWidth = widthTemp > 990 ? widthTemp : 990;
+        var wrapWidth = widthTemp;
         var wrapHeight = wrapWidth / imgWidth * imgHeight > 586 ? wrapWidth / imgWidth * imgHeight : 586;
         resizePic(wrapWidth, wrapHeight * 1.2, imgWidth, imgHeight, $("#feeding-img-wrap"), $(
             "#feeding-img"));
@@ -28,9 +39,7 @@ $(document).ready(function () {
         marginTo2 = 1875;
     };
     $(window).resize(function () {
-        size = getViewSizeWithoutScrollbar();
-        resizeDog();
-        resizeFeeder();
+        resizeFunc();
 
     });
     $(window).scroll(function () {
@@ -186,7 +195,5 @@ $(document).ready(function () {
             });
         }, 1500);
     };
-    size = getViewSizeWithoutScrollbar();
-    resizeDog();
-    resizeFeeder();
+    resizeFunc();
 });

@@ -45,6 +45,8 @@ abbr,acronym { border: 0;
 }
 body{
 	font-family: "OSR";
+    width: 100%;
+    overflow-x: hidden;
 }
 @font-face {
 	font-family: "OSEB";

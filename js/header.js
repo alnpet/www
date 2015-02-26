@@ -294,8 +294,8 @@ $(document).ready(function () {
         url: '/ajax/newsletter?op=signup',
         type: 'post',
         dataType: 'text',
-        success: function (data) {
-            alert("Submit successfully!");
+        success: function (data) {　　　　　　
+            alert("Submit successfully!");　　　
             $(".addition-tpl").remove();
         },
         error: function (data) {
@@ -374,15 +374,33 @@ $(document).ready(function () {
             $("#top-nav-content .news-letter-button").hide();
             $("#top-nav-small-button-wrap").hide();
             $("#page-direct-line").hide();
+            $(".top-nav-right-button").css("font-size", "18px");
+            $("#phone-nav-button").show();
         } else {
             $("#top-nav-content .news-letter-button").show();
             $("#top-nav-small-button-wrap").show();
             $("#page-direct-line").show();
+            $(".top-nav-right-button").css("font-size", "12px");
+            $("#phone-nav-button").hide();
         }
     };
     $(window).resize(function () {
         size = getViewSizeWithoutScrollbar();
         resizeHeader();
     });
+    $("#phone-nav-button").click(function () {
+        $("#main-container").hide();
+        $.ajax({
+            url: "./phonenav.tpl",
+            dataType: "text",
+            success: function (content) {
+                $("body").prepend(content);
+            }
+        });
+    });
+    $(document).on("click", "#phone-nav-delete", function () {
+        $("#phone-nav").remove();
+        $("#main-container").show();
+    })
     resizeHeader();
 });
