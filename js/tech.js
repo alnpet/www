@@ -82,16 +82,15 @@ $(document).ready(function () {
                 });
             }
             if (size.width < 1040) {
-                $("#tech-low-power .right-part").css("marginRight","0px");
-            }
-            else{
-                $("#tech-low-power .right-part").css("marginRight","-25px");
+                $("#tech-low-power .right-part").css("marginRight", "0px");
+            } else {
+                $("#tech-low-power .right-part").css("marginRight", "-25px");
             }
             if (size.width < 900) {
-                
+
                 $("#tech-low-power h1").css("color", "#333");
                 $("#tech-low-power p").css("color", "#999");
-            } else {                
+            } else {
                 $("#tech-low-power h1").css("color", "white");
                 $("#tech-low-power p").css("color", "white");
             }
@@ -595,7 +594,7 @@ $(document).ready(function () {
         $(".tech-photo-show-content").css("height", resizeHeight + "px");
         $(".tech-photo-show-each p").each(function (i, obj) {
             var width = $(obj).css("width");
-            $(obj).css("marginLeft", sizeTemp * 0.6 - parseInt(width, 10) + "px");
+            $(obj).css("marginLeft", sizeTemp * 0.6 - parseInt(width, 10) - 10 + "px");
         });
     };
     var resizeScroll = function () {

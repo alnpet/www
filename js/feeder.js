@@ -6,8 +6,20 @@ $(document).ready(function () {
         resizeFeeder();
         if (size.width < 990) {
             changeScale($("#dog-process-bar"), 990, 400);
+            $("#feeder-feeding-system-content").css("marginLeft", "30%");
+            $("#feeder-feeder-pic").css({
+                "width": "270px",
+                "height": "auto",
+                "margin-top": "120px"
+            });
         } else {
             recoverScale($("#dog-process-bar"));
+            $("#feeder-feeding-system-content").css("marginLeft", "495px");
+            $("#feeder-feeder-pic").css({
+                "width": "444px",
+                "height": "556",
+                "margin-top": "0px"
+            });
         }
     };
     var resizeDog = function () {

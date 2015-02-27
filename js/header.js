@@ -29,18 +29,24 @@ var scrollPic = function (imgWidth, imgHeight, essentialHeight, marginTo, jquery
     return marginFrom;
 
 };
-var changeScale = function (jqueryObj, prevWidth, prevHeight) {
+var changeScale = function (jqueryObj, prevWidth, prevHeight, scaleTemp) {
+    var calcScale;
+    if (scaleTemp) {
+        calcScale = scaleTemp;
+    } else {
+        calcScale = scale;
+    }
     var marginLeft = (prevWidth - size.width) / 2;
     var marginTop = (prevHeight - prevHeight * scale) / 2;
     $(jqueryObj).css({
-        "transform": "scale(" + scale + ", " + scale + ")",
-        "-ms-transform": "scale(" + scale + ", " + scale + ")",
+        "transform": "scale(" + calcScale + ", " + calcScale + ")",
+        "-ms-transform": "scale(" + calcScale + ", " + calcScale + ")",
         /* IE 9 */
-        "-moz-transform": "scale(" + scale + ", " + scale + ")",
+        "-moz-transform": "scale(" + calcScale + ", " + calcScale + ")",
         /* Firefox */
-        "-webkit-transform": "scale(" + scale + ", " + scale + ")",
+        "-webkit-transform": "scale(" + calcScale + ", " + calcScale + ")",
         /* Safari 和 Chrome */
-        "-o-transform": "scale(" + scale + ", " + scale + ")",
+        "-o-transform": "scale(" + calcScale + ", " + calcScale + ")",
         /* Opera */
         "left": 0 - marginLeft + "px",
         "top": 0 - marginTop + "px",
@@ -269,6 +275,13 @@ var preorderShow = function () {
             var nowHeight = getViewSizeWithoutScrollbar().height + scrollTop;
             var heightTemp = nowHeight - 800 > 0 ? nowHeight - 800 : 0;
             $("#preorder-popout-wrap").css("marginTop", heightTemp + "px");
+            if (size.width < 1040) {
+                changeScale($("#preorder-popout"), 1040, 638, 660 / 1040);
+                var left = (size.width) / 2;
+                $("#preorder-popout").css({
+                    "top": "0px"
+                });
+            }
             $("#preorder-popout").hide().myFadeIn();
         }
     });
@@ -285,11 +298,23 @@ var newsletterShow = function () {
             var nowHeight = getViewSizeWithoutScrollbar().height + scrollTop;
             var heightTemp = nowHeight - 800 > 0 ? nowHeight - 800 : 0;
             $("#newsletter-popout-wrap").css("marginTop", heightTemp + "px");
+            if (size.width < 990) {
+                changeScale($("#newsletter-popout"), 912, 545, 660 / (912));
+                $("#newsletter-popout").css({
+                    "top": "40px",
+                    "paddingLeft": "0px"
+                });
+            }
             $("#newsletter-popout").hide().myFadeIn();
         }
     });
 };
 $(document).ready(function () {
+    var i = document.getElementsByTagName("meta");
+    var scaleTemp;
+    scaleTemp = $(document).width() / 626;
+    metaScale = scaleTemp;
+    i[1]["content"] = "width=626, initial-scale=" + scaleTemp;
     var options = {
         url: '/ajax/newsletter?op=signup',
         type: 'post',
@@ -303,6 +328,11 @@ $(document).ready(function () {
         }
     };
     $(document).on("click", ".smart-pre-order,#pre-order-button", function () {
+        preorderShow();
+    });
+    $(document).on("click", "#phone-nav .pre-order", function () {
+        $("#phone-nav").remove();
+        $("#main-container").show();
         preorderShow();
     });
     $(document).on("click", ".news-letter-button", function () {
@@ -368,20 +398,53 @@ $(document).ready(function () {
             animateTo: 0
         });
     });
-    size = getViewSizeWithoutScrollbar();
+    size = getViewSizeWithScrollbar();
     var resizeHeader = function () {
         if (size.width < 990) {
             $("#top-nav-content .news-letter-button").hide();
             $("#top-nav-small-button-wrap").hide();
             $("#page-direct-line").hide();
-            $(".top-nav-right-button").css("font-size", "18px");
+            $(".top-nav-right-button").css({
+                "font-size": "30px",
+                "height": "25px",
+                "line-height": "20px",
+                "marginBottom": "-14px"
+            });
             $("#phone-nav-button").show();
+            $("#bottom-nav-right-wrap").css({
+                "width": "100%",
+                "text-align": "center"
+            });
+            $("#copyright-line").css({
+                "font-size": "24px",
+                "margin-left": "auto",
+                "margin-right": "auto",
+                "width": "475px",
+                "text-align": "center"
+            });
+
         } else {
             $("#top-nav-content .news-letter-button").show();
             $("#top-nav-small-button-wrap").show();
             $("#page-direct-line").show();
-            $(".top-nav-right-button").css("font-size", "12px");
+            $(".top-nav-right-button").css({
+                "font-size": "12px",
+                "height": "11px",
+                "line-height": "11px",
+                "marginBottom": "0px"
+            });
             $("#phone-nav-button").hide();
+            $("#bottom-nav-right-wrap").css({
+                "width": "auto",
+                "text-align": "left"
+            });
+            $("#copyright-line").css({
+                "font-size": "12px",
+                "margin-left": "0px",
+                "margin-right": "0px",
+                "width": "auto",
+                "text-align": "left"
+            });
         }
     };
     $(window).resize(function () {
@@ -401,6 +464,6 @@ $(document).ready(function () {
     $(document).on("click", "#phone-nav-delete", function () {
         $("#phone-nav").remove();
         $("#main-container").show();
-    })
+    });
     resizeHeader();
 });

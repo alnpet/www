@@ -100,7 +100,7 @@ $(document).ready(function () {
     };
     var resize = function () {
         var heightTemp = size.height - 134;
-        var widthTemp = size.width;
+        var widthTemp = size.width>990?size.width:990;
         var imgWidth = 1920;
         var imgHeight = 800;
         var newWidth;

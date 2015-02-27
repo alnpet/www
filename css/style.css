@@ -1,3 +1,8 @@
+#main-container{
+    position: absolute;
+    width: 100%;
+    overflow: hidden;
+}
 #main-bg-hover{
     width: 100%;
     height: 100%;
@@ -825,7 +830,7 @@
 }
 #bottom-nav{
     padding-top: 42px;
-    height: 103px;
+    min-height: 103px;
 }
 #bottom-nav-wrap{
     background-color: white;
@@ -846,7 +851,7 @@
 }
 #copyright-line{
     margin-top: 30px;
-    font-size: 12px;
+    font-size: 24px;
     color: #878282;
 }
 #app-img-wrap{
@@ -1897,7 +1902,7 @@
     width: 100%;
 }
 #tech-proof{
-    height: 413px;
+    min-height: 413px;
     padding-top: 41px;
     color: white;
     font-family: "OSL";
@@ -2572,7 +2577,7 @@ a{
     height: 54px;
     border-bottom: 1px solid rgb(242, 242, 242);
     font-family: "OSL";
-    font-size: 20px;
+    font-size: 28px;
     line-height: 54px;
     padding-left: 8%;
     color: #666;
