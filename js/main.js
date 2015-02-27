@@ -100,7 +100,7 @@ $(document).ready(function () {
     };
     var resize = function () {
         var heightTemp = size.height - 134;
-        var widthTemp = size.width>990?size.width:990;
+        var widthTemp = size.width > 990 ? size.width : 990;
         var imgWidth = 1920;
         var imgHeight = 800;
         var newWidth;
@@ -137,6 +137,7 @@ $(document).ready(function () {
     };
     var resizeMobile = function () {
         if (size.width < 990) {
+            //$("#page-direct-line div").show();
             $("#feeder-video-audio").hide();
             $("#feeder-pointer").hide();
             $("#feeder-dog").hide();
@@ -303,11 +304,20 @@ $(document).ready(function () {
                 "top": "-220px"
             });
         } else {
-            $("#app-small-phone").css({
-                "top": "0px",
-                "left": "0px",
-                "marginLeft": "0%"
-            });
+            if (size.width < 990) {
+                $("#app-small-phone").css({
+                    "position": "relative",
+                    "top": "0px",
+                    "left": "4%",
+                    "marginLeft": "0%"
+                });
+            } else {
+                $("#app-small-phone").css({
+                    "top": "0px",
+                    "left": "0px",
+                    "marginLeft": "0%"
+                });
+            }
             $("#app-right-content").css("marginLeft", "0%");
             $("#app-right-content h1").css({
                 "top": "0px"

@@ -401,16 +401,24 @@ $(document).ready(function () {
     size = getViewSizeWithScrollbar();
     var resizeHeader = function () {
         if (size.width < 990) {
+            $("#pre-order-button").css({
+                "position":"relative",
+                "top":"-30px",
+                "right":"20px",
+                "height": "30px",
+                "line-height": "30px"
+            });
+            $("#pre-order-button").show();
             $("#top-nav-content .news-letter-button").hide();
-            $("#top-nav-small-button-wrap").hide();
-            $("#page-direct-line").hide();
+            //$("#top-nav-small-button-wrap").hide();
+            //$("#page-direct-line").hide();
             $(".top-nav-right-button").css({
-                "font-size": "30px",
-                "height": "25px",
+                "font-size": "20px",
+                "height": "20px",
                 "line-height": "20px",
                 "marginBottom": "-14px"
             });
-            $("#phone-nav-button").show();
+            //$("#phone-nav-button").show();
             $("#bottom-nav-right-wrap").css({
                 "width": "100%",
                 "text-align": "center"
@@ -422,10 +430,58 @@ $(document).ready(function () {
                 "width": "475px",
                 "text-align": "center"
             });
-
+            $("#top-nav-small-button-wrap").css({
+                "marginRight": "0px"
+            });
+            $("#page-direct-line a").hide();
+            $("#top-nav-small-button-wrap img").css({
+                "width": "22px",
+                "height": "24px",
+                "marginRight": "9px"
+            });
+            $("#bottom-nav-small-button-wrap a img").css({
+                "width": "28px",
+                "height": "30px",
+                "marginRight": "9px"
+            });
+            $(".news-letter-button .intro").css({
+                "width": "148px",
+                "font-size": "16px",
+                "line-height": "30px"
+            });
+            $(".news-letter-button").css({
+                "width": "170px",
+                "height": "30px"
+            });
+            $(".news-letter-button img").css({
+                "marginTop":"9px"
+            });
         } else {
+            $("#pre-order-button").css({
+                "position": "relative",
+                "top": "0px",
+                "right": "0px",
+                "z-index": "1",
+                "height": "21px",
+                "line-height": "21px"
+            });
             $("#top-nav-content .news-letter-button").show();
             $("#top-nav-small-button-wrap").show();
+            $("#top-nav-small-button-wrap").css({
+                "marginRight": "50px"
+            });
+            $("#top-nav-small-button-wrap img").css({
+                "width": "14px",
+                "height": "15px",
+                "marginRight": "3px"
+            });
+            $("#bottom-nav-small-button-wrap a img").css({
+                "width": "14px",
+                "height": "15px",
+                "marginRight": "3px"
+            });
+            $("#page-direct-line a").show();
+            $("#page-direct-line div").show();
             $("#page-direct-line").show();
             $(".top-nav-right-button").css({
                 "font-size": "12px",
@@ -444,6 +500,19 @@ $(document).ready(function () {
                 "margin-right": "0px",
                 "width": "auto",
                 "text-align": "left"
+            });
+            $(".news-letter-button .intro").css({
+                "width": "114px",
+                "font-size": "12px",
+                "line-height": "23px"
+            });
+            $(".news-letter-button img").css({
+                "marginTop":"6px"
+            });
+            $(".news-letter-button").css({
+                "width": "136px",
+                "height": "23px"
+                
             });
         }
     };
@@ -466,4 +535,5 @@ $(document).ready(function () {
         $("#main-container").show();
     });
     resizeHeader();
+
 });
