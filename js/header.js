@@ -316,7 +316,7 @@ $(document).ready(function () {
     metaScale = scaleTemp;
     i[1]["content"] = "width=626, initial-scale=" + scaleTemp;
     var options = {
-        url: '/ajax/newsletter?op=signup',
+        url: '/pet/ajax/newsletter?op=signup',
         type: 'post',
         dataType: 'text',
         success: function (data) {　　　　　　
